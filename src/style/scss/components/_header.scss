@@ -1,0 +1,21 @@
+// Header component
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+h1 {
+  @include text($fz--h1, $fw__roboto__bold);
+  @include mobile() {
+    @include text($fz--h1-mobile, $fw__roboto__bold);
+  }
+}
+
+.Header-Title {
+  margin-top: 1em;
+  margin-bottom: 0.3125em;
+
+  text-transform: uppercase;
+
+  @include mobile() {
+    margin-bottom: 0.5em;
+  }
+}

@@ -1,0 +1,21 @@
+// Main page container
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+.Container {
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0 1.875rem;
+
+  @include lg() {
+    width: 1000px;
+  }
+
+  @include md() {
+    width: 760px;
+  }
+
+  @include sm() {
+    width: 100%;
+  }
+}

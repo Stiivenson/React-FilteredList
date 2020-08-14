@@ -1,0 +1,120 @@
+// Navigation Bar + all inner blocks
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+.Navigation {
+  color: $color__white;
+  background-color: $color__blue;
+}
+
+.Navigation-Container {
+  height: 90px;
+  @include padding-y(25px);
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  & > :nth-child(1) {
+    margin-right: 4rem;
+  }
+
+  @include text($fz--subheading, $fw__roboto__regular);
+
+  @include lg() {
+    justify-content: center;
+  }
+
+  @include md() {
+    height: auto;
+    flex-flow: column;
+
+    & > :nth-child(1) {
+      margin-right: 0;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+// Search-Block
+//////////////////////////////////////////////////////
+
+.Search {
+  height: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  @include mobile-sm() {
+    flex-flow: column;
+  }
+}
+
+.Search-Title {
+  margin-right: 1rem;
+  align-self: center;
+
+  @include mobile-sm() {
+    margin-right: 0;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.Search-Input {
+  width: 250px;
+  padding: 0.625em 1em;
+
+  border-radius: $border-radius;
+  @include text($fz--base, $fw__roboto__regular);
+
+  &::placeholder {
+    color: $color__gray;
+  }
+}
+
+// Filter-Block
+//////////////////////////////////////////////////////
+
+.Filter {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include mobile-sm() {
+    flex-flow: column;
+  }
+}
+
+.Filter-Title {
+  margin-right: 2rem;
+
+  @include mobile-sm() {
+    margin-right: 0;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.Filter-Buttons {
+  li {
+    cursor: pointer;
+    display: inline;
+
+    padding: 0.5em 1em;
+    margin-right: 1rem;
+
+    border-radius: $border-radius;
+    background-color: $color__black-mate;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .Filter-Button-active {
+    color: $color__black;
+    background-color: $color__white;
+  }
+}

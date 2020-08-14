@@ -1,0 +1,109 @@
+// Main Elements normalization
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+
+// Main normalization
+////////////////////////////////////
+
+html,
+body {
+    width: 100%;
+
+    background-color: $color__body;
+    color: #000000;
+
+    font-size: $fz--base;
+    line-height: 1.2;
+    font-family: $ff__roboto;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+// No outline on focus controls
+////////////////////////////////////
+
+:focus,
+:active {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+// All blocks to border-box
+////////////////////////////////////
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+// Lists
+////////////////////////////////////
+
+ul li {
+    list-style: none;
+}
+
+
+// Forms
+////////////////////////////////////
+
+input {
+    border: none;
+    box-shadow: none;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
